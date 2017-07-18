@@ -1,0 +1,34 @@
+<head>
+    <title>Fodase</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"> Task Meteor</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}}
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        {{#if currentUser}} {{> addform }} {{> lista }} {{else}}
+        <div>
+            <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <h3>Você deve se logar primeiro fdp</h3>
+            </div>
+            <h1>Você deve se logar primeiro fdp</h1>
+        </div>
+        {{/if}}
+    </main>
+
+</body>

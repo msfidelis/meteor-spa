@@ -2,19 +2,38 @@
 
     <div class="row">
         <div class="col-xs-12">
-            {{#each tarefas}}
-            <div class="row">
-                <div class="col-xs-11">
-                    {{nome}} - {{formataData}} 
-                </div>
-                <div class="col-xs-1">
-                    <button class="btn btn-danger" value={{_id}}>
-                        Excluir
-                    </button>
-                </div>
-                <hr>
-            </div>
-            {{/each}}
+
+            <table class="table table-responsive">
+                <thead>
+                    <th>
+                        Task
+                    </th>
+                    <th>
+                        Data
+                    </th>
+                    <th>
+                        Ações
+                    </th>
+                </thead>
+                <tbody>
+                    {{#each tarefas}}
+                        <tr>
+                            <td>
+                                {{nome}}  
+                            </td>
+                            <td>
+                                {{data}}
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" value={{_id}}>
+                                    Excluir
+                                </button>
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
         </div>
 
     </div>

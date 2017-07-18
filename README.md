@@ -7,6 +7,8 @@
 
 `npm install`
 
+`meteor run`
+
 ## Deploy
 
 ### Desligar o Autopublish
@@ -14,4 +16,3 @@
 O Meteor é bom pra prototipar, mas não quero que ninguém fique olhando meu Mongo de graça 
 
 `meteor remove autopublish`
-

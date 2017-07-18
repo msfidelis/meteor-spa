@@ -1,7 +1,7 @@
 Template.lista.helpers({
 
     tarefas: () => {
-        return Tarefas.find({})
+        return Tarefas.find({}, {sort: {checked: 1}})
     },
 
     formataData: () => {
@@ -28,7 +28,6 @@ Template.lista.events({
             let id = $("#id_tarefa")
             id.val(result._id)
         })
-
     },
 
     "click .deletatask": (e, template) => {
@@ -37,5 +36,11 @@ Template.lista.events({
         console.log(e)
         Meteor.call("remove", tarefa)
             //Tarefas.remove({ _id: tarefa })
+    },
+
+    "click .mudastatus": (e, template) => {
+        e.preventDefault();
+        var tarefa = e.target.value;
+        Meteor.call("mudastatus", tarefa)
     }
 })

@@ -11,7 +11,7 @@ Template.addform.events({
         if (input.val() != "") {
 
             if (id.val() == "" ) {
-                Meteor.call("adiciona", { nome: nome, usuario: Meteor.userId() })
+                Meteor.call("adiciona", { nome: nome, usuario: Meteor.userId(), checked: false })
             } else {
                 Meteor.call("atualiza", { nome: nome, id: id.val(), usuario: Meteor.userId() })
             }

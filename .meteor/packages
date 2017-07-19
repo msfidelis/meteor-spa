@@ -23,3 +23,5 @@ momentjs:moment
 accounts-base
 accounts-password
 ian:accounts-ui-bootstrap-3
+kadira:flow-router
+iron:router

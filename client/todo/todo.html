@@ -1,4 +1,4 @@
-<template name="home">
+<template name="todo">
     <head>
         <title>Meu Todo</title>
     </head>
@@ -7,7 +7,7 @@
         {{> navbar}}
 
         <main class="container">
-            {{#if currentUser}} {{> dashboard }} {{else}} {{> deslogado}} {{/if}}
+            {{#if currentUser}} {{> addform }} {{> lista }} {{else}} {{> deslogado}} {{/if}}
         </main>
 
     </body>

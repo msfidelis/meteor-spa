@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                     {{#each tarefas}}
-                        <tr class="{{#if checked}}bg-warning{{/if}}">
+                        <tr class="{{#if checked}}bg-success{{/if}}">
                             <td>
                                 {{nome}}  
                             </td>
@@ -31,8 +31,10 @@
                                 <button class="btn btn-warning mudastatus" value={{_id}}>
                                     {{#if checked}}
                                        <span class="glyphicon glyphicon-repeat"></span>
+                                       Voltar
                                     {{else}}   
                                         <span class="glyphicon glyphicon-ok"></span>
+                                        Finalizar
                                     {{/if}}
                                 
                                 </button>
